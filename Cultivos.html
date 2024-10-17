@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOFA - Proyectos de Cultivos</title>
+    <link rel="stylesheet" href="CSS/EstilosDofa.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>Cuadro DOFA - Proyectos de Cultivos</h1>
+
+        <div class="content">
+            <!-- Parte izquierda: Cuadro DOFA -->
+            <div class="dofa-grid">
+                <div id="fortalezas" class="dofa-item fortaleza" ondrop="drop(event)" ondragover="allowDrop(event)">
+                    <h2>Fortalezas</h2>
+                </div>
+                <div id="oportunidades" class="dofa-item oportunidad" ondrop="drop(event)" ondragover="allowDrop(event)">
+                    <h2>Oportunidades</h2>
+                </div>
+                <div id="debilidades" class="dofa-item debilidad" ondrop="drop(event)" ondragover="allowDrop(event)">
+                    <h2>Debilidades</h2>
+                </div>
+                <div id="amenazas" class="dofa-item amenaza" ondrop="drop(event)" ondragover="allowDrop(event)">
+                    <h2>Amenazas</h2>
+                </div>
+            </div>
+
+            <!-- Parte derecha: Lista de opciones DOFA -->
+            <div class="dofa-options">
+                <h3>Selecciona las categorías para ver las opciones:</h3>
+
+                <!-- Fortalezas -->
+                <div class="category">
+                    <h4 onclick="toggleList('fortalezas-list')">Fortalezas</h4>
+                    <div id="fortalezas-list" class="dofa-list" style="display: none;">
+                        <strong>Recursos Naturales</strong>
+                        <p draggable="true" ondragstart="drag(event)">Suelo fértil y de buena calidad</p>
+                        <p draggable="true" ondragstart="drag(event)">Disponibilidad de agua para riego</p>
+                        <strong>Infraestructura</strong>
+                        <p draggable="true" ondragstart="drag(event)">Sistemas de riego eficientes</p>
+                        <p draggable="true" ondragstart="drag(event)">Infraestructura de almacenamiento adecuada</p>
+                        <strong>Marketing y ventas</strong>
+                        <p draggable="true" ondragstart="drag(event)">Acceso a mercados locales e internacionales</p>
+                        <!-- Añade más opciones aquí -->
+                    </div>
+                </div>
+
+                <!-- Debilidades -->
+                <div class="category">
+                    <h4 onclick="toggleList('debilidades-list')">Debilidades</h4>
+                    <div id="debilidades-list" class="dofa-list" style="display: none;">
+                        <strong>Recursos Naturales</strong>
+                        <p draggable="true" ondragstart="drag(event)">Suelo de baja calidad</p>
+                        <p draggable="true" ondragstart="drag(event)">Clima inestable</p>
+                        <strong>Infraestructura</strong>
+                        <p draggable="true" ondragstart="drag(event)">Falta de infraestructura adecuada</p>
+                        <!-- Añade más opciones aquí -->
+                    </div>
+                </div>
+
+                <!-- Oportunidades -->
+                <div class="category">
+                    <h4 onclick="toggleList('oportunidades-list')">Oportunidades</h4>
+                    <div id="oportunidades-list" class="dofa-list" style="display: none;">
+                        <strong>Tendencias del mercado</strong>
+                        <p draggable="true" ondragstart="drag(event)">Creciente demanda de productos orgánicos</p>
+                        <strong>Apoyo institucional</strong>
+                        <p draggable="true" ondragstart="drag(event)">Acceso a subsidios gubernamentales</p>
+                        <!-- Añade más opciones aquí -->
+                    </div>
+                </div>
+
+                <!-- Amenazas -->
+                <div class="category">
+                    <h4 onclick="toggleList('amenazas-list')">Amenazas</h4>
+                    <div id="amenazas-list" class="dofa-list" style="display: none;">
+                        <strong>Factores climáticos</strong>
+                        <p draggable="true" ondragstart="drag(event)">Riesgo de fenómenos naturales</p>
+                        <strong>Competencia</strong>
+                        <p draggable="true" ondragstart="drag(event)">Competencia fuerte en el mercado</p>
+                        <!-- Añade más opciones aquí -->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Botón para ver las conclusiones -->
+        <div class="btn-container">
+            <button class="evaluate-btn" onclick="verConclusiones()">Ver Conclusiones</button>
+        </div>
+    </div>
+
+    <script src="JS/Dofa.js"></script>
+
+</body>
+</html>

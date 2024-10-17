@@ -1,75 +1,90 @@
-/* Estilo general */
 body {
     font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    margin: 0;
-    background-color: #f0f0f0;
+    background-color: #f4f4f4;
 }
 
-/* Contenedor del cajero */
-.atm-container {
-    background-color: #333;
-    padding: 20px;
+.container {
+    width: 80%;
+    height: 80vh;
+    background-color: white;
     border-radius: 10px;
-    width: 300px;
-    text-align: center;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
 }
 
-/* Título del cajero */
 h1 {
+    background-color: #4CAF50;
     color: white;
+    text-align: center;
+    margin: 0;
+    padding: 20px 0;
 }
 
-/* Pantalla de mensajes */
-.screen {
-    background-color: #000;
-    color: lime;
-    padding: 10px;
-    margin-bottom: 20px;
-    height: 100px;
+.options {
+    display: flex;
+    justify-content: space-between; /* Añade espacio entre los elementos */
+    flex-grow: 1;
+    padding: 20px; /* Añadir padding para que no estén tan pegadas a los bordes */
+}
+
+.option {
+    flex: 1;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    border-radius: 5px;
-}
-
-/* Botones */
-.btn {
-    background-color: #007bff;
-    color: white;
-    padding: 10px 20px;
-    margin: 10px;
-    border: none;
-    border-radius: 5px;
+    text-align: center;
+    font-size: 24px;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    margin: 0 10px; /* Añadir un pequeño margen lateral para que no estén pegadas */
 }
 
-.btn:hover {
-    background-color: #0056b3;
-}
-
-/* Contenedor de opciones de retiro */
-.retiro-container {
-    display: none;
-    flex-direction: column;
-}
-
-/* Ocultar elementos */
-.hidden {
-    display: none;
-}
-
-/* Estilos para el campo de ingreso personalizado */
-.input-text {
-    padding: 10px;
-    margin: 10px 0;
+.option img {
     width: 100%;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.option p {
+    margin: 0;
+    font-size: 20px; /* Ajustar tamaño del texto */
+    font-weight: bold; /* Negrita para mayor visibilidad */
+    color: #333;
+    background-color: rgba(255, 255, 255, 0.8); /* Fondo semitransparente */
+    padding: 10px 20px; /* Espacio alrededor del texto */
+    border-radius: 5px; /* Bordes redondeados */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave para mejorar la visibilidad */
+    transition: transform 0.3s ease; /* Efecto hover */
+}
+
+.option:hover p {
+    transform: scale(1.05); /* Efecto de zoom al pasar el mouse */
+}
+
+.option:hover {
+    background-color: #e0e0e0;
+}
+
+.option a {
+    text-decoration: none;
+    color: #333;
+}
+
+#cultivos {
+    background-color: #dff0d8;
+}
+
+#animales {
+    background-color: #d9edf7;
 }

@@ -1,0 +1,122 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f4f4f4;
+}
+
+.container {
+    width: 90%;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+}
+
+.content {
+    display: flex;
+    justify-content: space-between;
+}
+
+.dofa-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+    width: 50%;
+}
+
+.dofa-item {
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    height: 200px;
+}
+
+.fortaleza {
+    background-color: #dff0d8;
+}
+
+.oportunidad {
+    background-color: #d9edf7;
+}
+
+.debilidad {
+    background-color: #fcf8e3;
+}
+
+.amenaza {
+    background-color: #f2dede;
+}
+
+.dofa-options {
+    width: 40%;
+    text-align: left;
+}
+
+.dofa-list {
+    background-color: #f9f9f9;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 10px;
+}
+
+.dofa-list p {
+    margin: 5px 0;
+    padding: 5px;
+    background-color: #e0e0e0;
+    cursor: pointer;
+}
+
+.category h4 {
+    cursor: pointer;
+    margin-bottom: 10px;
+    color: #333;
+    font-size: 18px;
+}
+
+strong {
+    display: block;
+    margin-top: 10px;
+    color: #555;
+}
+
+.btn-container {
+    margin-top: 30px;
+}
+
+.evaluate-btn {
+    padding: 15px 30px;
+    font-size: 18px;
+    color: white;
+    background-color: #4CAF50;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.evaluate-btn:hover {
+    background-color: #45a049;
+}
+
+.delete-btn {
+    margin-left: 10px;
+    padding: 5px;
+    font-size: 12px;
+    color: white;
+    background-color: red;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.delete-btn:hover {
+    background-color: darkred;
+}

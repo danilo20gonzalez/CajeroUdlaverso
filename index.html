@@ -3,48 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Simulación de Cajero Automático</title>
+    <title>Análisis DOFA Interactivo</title>
+    <!-- Enlazar el archivo CSS -->
     <link rel="stylesheet" href="CSS/Style.css">
 </head>
 <body>
-    <div class="atm-container">
-        <h1>Cajero Automático</h1>
 
-        <!-- Pantalla inicial con el mensaje de bienvenida -->
-        <div id="welcome-screen" class="screen">
-            <div class="message">Bienvenido al Cajero</div>
-            <button class="btn" onclick="iniciarTransaccion()">Comenzar</button>
-        </div>
-
-        <!-- Pantalla para seleccionar montos de retiro -->
-        <div id="retiro-options" class="screen hidden">
-            <div class="message">Selecciona la cantidad que deseas retirar:</div>
-            <button class="btn" onclick="seleccionarRetiro(100)">Retirar $100</button>
-            <button class="btn" onclick="seleccionarRetiro(200)">Retirar $200</button>
-            <button class="btn" onclick="seleccionarRetiro(500)">Retirar $500</button>
-            <button class="btn" onclick="mostrarCampoPersonalizado()">Ingresar otro valor</button>
-            <button class="btn" onclick="cancelar()">Cancelar</button>
-            <div id="custom-amount-container" class="hidden">
-                <input type="number" id="custom-amount" placeholder="Ingresa tu cantidad" class="input-text">
-                <button class="btn" onclick="retirarPersonalizado()">Confirmar cantidad</button>
+    <div class="container">
+        <h1>Análisis DOFA - Selecciona tu tipo de proyecto</h1>
+        <div class="options">
+            <div id="cultivos" class="option">
+                <a href="#" onclick="mostrarVentana('cultivos')">
+                    <img src="https://img.freepik.com/fotos-premium/asistencia-proyectos-agricolas-generativos_1169651-105549.jpg" alt="Proyectos de Cultivos">
+                    <p>Proyectos de Cultivos</p>
+                </a>
+            </div>
+            <div id="animales" class="option">
+                <a href="#" onclick="mostrarVentana('animales')">
+                    <img src="https://mascolombia.com/wp-content/uploads/2022/07/pollos-y-cerdos-colombianos-de-donde-viene-su-comida.jpg" alt="Proyectos de Animales">    
+                    <p>Proyectos de Animales</p>
+                </a>
             </div>
         </div>
-
-        <!-- Pantalla de confirmación -->
-        <div id="confirmar-retiro" class="screen hidden">
-            <div class="message">¿Confirmas retirar <span id="monto-confirmar"></span>?</div>
-            <button class="btn" onclick="confirmarRetiro()">Confirmar</button>
-            <button class="btn" onclick="cancelar()">Cancelar</button>
-        </div>
-
-        <!-- Pantalla de resultado final -->
-        <div id="final-screen" class="screen hidden">
-            <div class="message" id="mensaje-final"></div>
-            <button class="btn" onclick="reiniciar()">Finalizar</button>
-        </div>
-
     </div>
 
+    <!-- Enlazar el archivo JavaScript -->
     <script src="JS/script.js"></script>
+
 </body>
 </html>
